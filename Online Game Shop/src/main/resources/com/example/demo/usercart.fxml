@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #161616;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.usercontroller.UserCartController">
+   <children>
+      <ImageView fitHeight="720.0" fitWidth="1280.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@wallpaperflare.com_wallpaper.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="24.0" fitWidth="23.0" layoutX="72.0" layoutY="682.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@product%20images/Asset%204.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <Pane prefHeight="720.0" prefWidth="251.0" style="-fx-background-color: #1f1f1f;">
+         <children>
+            <Button layoutY="572.0" mnemonicParsing="false" onAction="#accountinfoEvent" prefHeight="53.0" prefWidth="252.0" style="-fx-background-color: #101010;" text="Account Info" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutY="493.0" mnemonicParsing="false" onAction="#libraryEvent2" prefHeight="53.0" prefWidth="252.0" style="-fx-background-color: #101010;" text="Library" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutY="413.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="252.0" style="-fx-background-color: #101010;" text="Cart" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="17.0" />
+               </font>
+            </Button>
+            <Button layoutY="255.0" mnemonicParsing="false" onAction="#dashboardEvent" prefHeight="53.0" prefWidth="252.0" style="-fx-background-color: #be2424;" text="Dashboard" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="17.0" />
+               </font>
+            </Button>
+            <Separator layoutX="26.0" layoutY="227.0" prefWidth="200.0" />
+            <Label fx:id="usernameLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="183.0" prefHeight="24.0" prefWidth="200.0" text="User" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="71.0" layoutY="164.0" prefHeight="15.0" prefWidth="106.0" text="Welcome" textAlignment="RIGHT" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="117.0" fitWidth="114.0" layoutX="67.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@product%20images/Asset%203.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="-1.0" layoutY="334.0" mnemonicParsing="false" onAction="#buyGamesEvent" prefHeight="53.0" prefWidth="252.0" style="-fx-background-color: #101010;" text="Buy Games" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="17.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Button layoutY="667.0" mnemonicParsing="false" onAction="#logoutEvent" prefHeight="53.0" prefWidth="252.0" style="-fx-background-color: #be2424;" text="Logout" textFill="WHITE">
+         <font>
+            <Font name="Roboto Bold" size="17.0" />
+         </font>
+      </Button>
+      <TableView fx:id="gameList" layoutX="314.0" layoutY="150.0" onMouseClicked="#detailsEvent" prefHeight="470.0" prefWidth="583.0">
+        <columns>
+          <TableColumn fx:id="titleCol" prefWidth="201.0" text="Game Title" />
+          <TableColumn fx:id="priceCol" prefWidth="215.0" text="Price" />
+            <TableColumn fx:id="totalCol" prefWidth="102.0" text="Total" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button layoutX="384.0" layoutY="645.0" mnemonicParsing="false" onAction="#confirmPurchaseEvent" prefHeight="44.0" prefWidth="155.0" style="-fx-background-color: #be2424;" text="Confirm Purchase" textFill="WHITE">
+         <font>
+            <Font name="Roboto Bold" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="651.0" layoutY="645.0" mnemonicParsing="false" onAction="#removeGameEvent" prefHeight="44.0" prefWidth="155.0" style="-fx-background-color: #be2424;" text="Remove From Cart" textFill="WHITE">
+         <font>
+            <Font name="Roboto Bold" size="13.0" />
+         </font>
+      </Button>
+      <Label alignment="TOP_LEFT" layoutX="358.0" layoutY="73.0" prefHeight="47.0" prefWidth="391.0" text="Games Added To Cart" textAlignment="RIGHT" textFill="WHITE">
+         <font>
+            <Font name="Roboto Bold" size="38.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="47.0" fitWidth="44.0" layoutX="302.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@product%20images/pngegg.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="935.0" layoutY="150.0" prefHeight="541.0" prefWidth="298.0" style="-fx-background-color: #1f1f1f; -fx-border-color: #be2424;">
+         <children>
+            <Rectangle fill="#be2424" height="61.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="298.0" />
+            <ImageView fx:id="productImage" fitHeight="188.0" fitWidth="280.0" layoutX="9.0" layoutY="71.0" pickOnBounds="true" />
+            <Label fx:id="titleLabel" alignment="TOP_LEFT" layoutY="267.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="280.0" text="--" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="22.0" />
+               </font>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+            </Label>
+            <Label fx:id="genreLabel" alignment="TOP_LEFT" layoutY="299.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="24.0" prefWidth="280.0" text="--" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="15.0" />
+               </font>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutY="334.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="83.0" text="Platform :" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="14.5" />
+               </font>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+            </Label>
+            <Label fx:id="platformLabel" alignment="TOP_LEFT" layoutX="83.0" layoutY="335.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="12.0" prefWidth="193.0" text="--" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutY="360.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="30.0" prefWidth="59.0" text="Type :" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="14.5" />
+               </font>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+            </Label>
+            <Label fx:id="typeLabel" alignment="TOP_LEFT" layoutX="57.0" layoutY="363.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="18.0" prefWidth="193.0" text="--" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutY="403.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="24.0" prefWidth="83.0" text="Windows :" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="14.5" />
+               </font>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+            </Label>
+            <Label fx:id="windowsLabel" alignment="TOP_LEFT" layoutX="82.0" layoutY="405.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="19.0" prefWidth="168.0" text="--" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutY="427.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="24.0" prefWidth="83.0" text="Cpu :" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="14.5" />
+               </font>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+            </Label>
+            <Label fx:id="cpuLabel" alignment="TOP_LEFT" layoutX="49.0" layoutY="428.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="19.0" prefWidth="168.0" text="--" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutY="451.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="24.0" prefWidth="83.0" text="Ram :" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="14.5" />
+               </font>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+            </Label>
+            <Label fx:id="ramLabel" alignment="TOP_LEFT" layoutX="54.0" layoutY="453.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="19.0" prefWidth="168.0" text="--" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutY="477.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="24.0" prefWidth="83.0" text="Gpu :" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="14.5" />
+               </font>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+            </Label>
+            <Label fx:id="gpuLabel" alignment="TOP_LEFT" layoutX="50.0" layoutY="479.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="19.0" prefWidth="168.0" text="--" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutY="502.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="24.0" prefWidth="83.0" text="Storage :" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="14.5" />
+               </font>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+            </Label>
+            <Label fx:id="storageLabel" alignment="TOP_LEFT" layoutX="75.0" layoutY="504.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="19.0" prefWidth="168.0" text="--" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label alignment="TOP_LEFT" layoutX="30.0" layoutY="19.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="24.0" prefWidth="207.0" text="Minimum Requirements" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
