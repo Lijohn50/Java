@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.admincontroller.AdminAddGames">
+   <children>
+      <AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #161616;">
+         <children>
+            <ImageView fitHeight="720.0" fitWidth="1280.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@wallpaperflare.com_wallpaper.jpg" />
+               </image>
+            </ImageView>
+            <Rectangle fill="#252525" height="551.0" layoutX="268.0" layoutY="50.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="489.0" />
+            <TextField fx:id="titleField" layoutX="295.0" layoutY="150.0" prefHeight="40.0" prefWidth="214.0" promptText="Game Title">
+               <font>
+                  <Font name="Roboto Regular" size="13.0" />
+               </font></TextField>
+            <Label layoutX="295.0" layoutY="130.0" text="Title :" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="295.0" layoutY="209.0" text="Genre :" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="295.0" layoutY="287.0" text="Type :" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="295.0" layoutY="370.0" text="Platform :" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="295.0" layoutY="448.0" text="Release Date :" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="gameType" layoutX="295.0" layoutY="308.0" prefHeight="40.0" prefWidth="214.0" />
+            <DatePicker fx:id="releaseDate" layoutX="295.0" layoutY="467.0" prefHeight="40.0" prefWidth="214.0" />
+            <Slider fx:id="price" layoutX="295.0" layoutY="558.0" majorTickUnit="50.0" max="1000.0" minorTickCount="5" prefHeight="14.0" prefWidth="215.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+            <Label layoutX="295.0" layoutY="532.0" text="Price :" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="534.0" layoutY="130.0" text="Description :" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="gameDescription" layoutX="534.0" layoutY="150.0" prefHeight="122.0" prefWidth="200.0" promptText="Game Description" />
+            <ChoiceBox fx:id="gamePlatform" layoutX="295.0" layoutY="388.0" prefHeight="40.0" prefWidth="214.0" />
+            <ImageView fx:id="gameImage" fitHeight="150.0" fitWidth="200.0" layoutX="534.0" layoutY="380.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="582.0" layoutY="337.0" text="Upload Image" textFill="#ff5dfa">
+               <font>
+                  <Font name="Roboto Bold" size="15.0" />
+               </font>
+            </Label>
+            <Button layoutX="534.0" layoutY="543.0" mnemonicParsing="false" onAction="#uploadImage" prefHeight="32.0" prefWidth="200.0" style="-fx-background-color: #23a699;" text="Upload" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button layoutX="692.0" layoutY="637.0" mnemonicParsing="false" onAction="#saveGameListEvent" prefHeight="53.0" prefWidth="147.0" style="-fx-background-color: #be2424;" text="Save" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="20.0" />
+               </font>
+            </Button>
+            <ComboBox fx:id="gameGenre" layoutX="295.0" layoutY="231.0" prefHeight="40.0" prefWidth="214.0" />
+            <Pane prefHeight="721.0" prefWidth="251.0" style="-fx-background-color: #1f1f1f;">
+               <children>
+                  <Button layoutY="569.0" mnemonicParsing="false" onAction="#customerInfoEvent" prefHeight="53.0" prefWidth="252.0" style="-fx-background-color: #101010;" text="Customer Info" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button layoutY="492.0" mnemonicParsing="false" onAction="#statEvent" prefHeight="53.0" prefWidth="252.0" style="-fx-background-color: #101010;" text="Stats" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button layoutY="413.0" mnemonicParsing="false" onAction="#removeGameEvent" prefHeight="53.0" prefWidth="252.0" style="-fx-background-color: #101010;" text="Remove/Update Games" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button layoutY="333.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="252.0" style="-fx-background-color: #101010;" text="Add Games" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Button layoutY="255.0" mnemonicParsing="false" onAction="#adminDashboardEvent" prefHeight="53.0" prefWidth="252.0" style="-fx-background-color: #be2424;" text="Dashboard" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Bold" size="17.0" />
+                     </font>
+                  </Button>
+                  <Separator layoutX="26.0" layoutY="227.0" prefWidth="200.0" />
+                  <Label contentDisplay="CENTER" layoutX="95.0" layoutY="184.0" text="Admin" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="71.0" layoutY="164.0" prefHeight="15.0" prefWidth="106.0" text="Welcome" textAlignment="RIGHT" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Regular" size="15.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="117.0" fitWidth="114.0" layoutX="67.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@product%20images/Asset%203.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Rectangle fill="#252525" height="551.0" layoutX="771.0" layoutY="49.0" opacity="0.5" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="489.0" />
+            <TextField fx:id="storageField" layoutX="801.0" layoutY="533.0" prefHeight="42.0" prefWidth="432.0" promptText="Game Title">
+               <font>
+                  <Font name="Roboto Regular" size="13.0" />
+               </font>
+            </TextField>
+            <Rectangle fill="#be2424" height="61.0" layoutX="772.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="489.0" />
+            <Label layoutX="903.0" layoutY="67.0" text="Minimum Requirements" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="21.0" />
+               </font>
+            </Label>
+            <Rectangle fill="#be2424" height="61.0" layoutX="269.0" layoutY="50.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="489.0" />
+            <Label layoutX="430.0" layoutY="69.0" text="Game Information" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="799.0" layoutY="222.0" text="Windows :" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="802.0" layoutY="317.0" text="Ram :" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="799.0" layoutY="414.0" text="Graphics Card :" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="801.0" layoutY="512.0" text="Storage :" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="windowsVariant" layoutX="801.0" layoutY="240.0" prefHeight="41.0" prefWidth="432.0" />
+            <ChoiceBox fx:id="ramVariant" layoutX="801.0" layoutY="336.0" prefHeight="41.0" prefWidth="432.0" />
+            <ChoiceBox fx:id="gpuVariant" layoutX="799.0" layoutY="433.0" prefHeight="41.0" prefWidth="432.0" />
+            <Label layoutX="800.0" layoutY="130.0" text="Cpu :" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Regular" size="14.0" />
+               </font>
+            </Label>
+            <ChoiceBox fx:id="cpuVariant" layoutX="800.0" layoutY="148.0" prefHeight="41.0" prefWidth="432.0" />
+            <Button layoutY="667.0" mnemonicParsing="false" onAction="#logoutEvent" prefHeight="53.0" prefWidth="252.0" style="-fx-background-color: #be2424;" text="Logout" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Bold" size="17.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="24.0" fitWidth="23.0" layoutX="72.0" layoutY="682.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@product%20images/Asset%204.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
