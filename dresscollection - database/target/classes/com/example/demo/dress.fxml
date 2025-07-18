@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.DressController_2">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="40.0" layoutX="195.0" layoutY="32.0" strokeType="INSIDE" width="230.0" />
+      <Label layoutX="208.0" layoutY="32.0" prefHeight="40.0" prefWidth="203.0" text="Dress Collection" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <Button layoutX="495.0" layoutY="39.0" mnemonicParsing="false" onAction="#backEvent" prefHeight="25.0" prefWidth="62.0" text="Back" />
+      <TextField fx:id="searchField" layoutX="51.0" layoutY="99.0" onKeyPressed="#searchDress" prefHeight="25.0" prefWidth="512.0" promptText="Type and enter to search" />
+      <TableView fx:id="productTable" layoutX="51.0" layoutY="139.0" prefHeight="171.0" prefWidth="511.0">
+         <columns>
+            <TableColumn fx:id="nameColumn" prefWidth="69.73583984375" text="Name" />
+            <TableColumn fx:id="typeColumn" prefWidth="62.49053955078125" text="Type" />
+            <TableColumn fx:id="colorColumn" prefWidth="59.77362060546875" text="Color" />
+            <TableColumn fx:id="priceColumn" prefWidth="64.3018798828125" text="Price" />
+            <TableColumn fx:id="lastPurchaseColumn" prefWidth="101.43402099609375" text="Last Purchase" />
+            <TableColumn fx:id="quantityColumn" minWidth="0.0" prefWidth="76.075439453125" text="Quantity" />
+            <TableColumn fx:id="boostedColumn" minWidth="0.0" prefWidth="75.16985158353378" text="Boosted" />
+         </columns>
+      </TableView>
+      <Separator layoutX="209.0" layoutY="329.0" prefWidth="200.0" />
+      <Label layoutX="70.0" layoutY="339.0" text="Selected Dress Information / Last Entried Product Information (Default)">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="dressName2" layoutX="60.0" layoutY="376.0" text="Dress Name: " />
+      <Label layoutX="61.0" layoutY="401.0" text="Dress Type: " />
+      <Label layoutX="61.0" layoutY="428.0" text="Available Size: " />
+      <Label layoutX="61.0" layoutY="453.0" text="Dress Color: " />
+      <Label layoutX="61.0" layoutY="478.0" text="Price: ">
+         <font>
+            <Font name="System Bold" size="12.773585319519043" />
+         </font>
+      </Label>
+      <Label layoutX="61.0" layoutY="505.0" text="Dress Details: " />
+      <Label layoutX="61.0" layoutY="532.0" text="Last Purchase Date: " />
+      <Label layoutX="61.0" layoutY="557.0" text="Available Quantity: " />
+      <Separator layoutX="307.0" layoutY="378.0" orientation="VERTICAL" prefHeight="200.0" />
+      <Label layoutX="327.0" layoutY="376.0" text="Discount Code: " />
+      <Label layoutX="327.0" layoutY="401.0" text="Targeted Customer: " />
+      <Label layoutX="327.0" layoutY="428.0" text="Facebook Boosting: " />
+      <ImageView fx:id="image2" fitHeight="84.0" fitWidth="103.0" layoutX="411.0" layoutY="457.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="387.0" layoutY="553.0" mnemonicParsing="false" onAction="#comingSoonEvent" prefHeight="4.0" prefWidth="62.0" style="-fx-background-color: #384fff;" text="Edit" textFill="#f7f6f6" />
+      <Button layoutX="467.0" layoutY="553.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" style="-fx-background-color: #ff2121;" text="Delete" textFill="WHITE" />
+      <Label fx:id="dressNameLabel" layoutX="129.0" layoutY="376.0" prefHeight="18.0" prefWidth="154.0" text="--" />
+      <Label fx:id="dressTypeLabel" layoutX="123.0" layoutY="401.0" prefHeight="18.0" prefWidth="154.0" text="--" />
+      <Label fx:id="sizeLabel" layoutX="138.0" layoutY="428.0" prefHeight="18.0" prefWidth="154.0" text="--" />
+      <Label fx:id="colorLabel" layoutX="125.0" layoutY="453.0" prefHeight="18.0" prefWidth="154.0" text="--" />
+      <Label fx:id="priceLabel" layoutX="96.0" layoutY="479.0" prefHeight="18.0" prefWidth="187.0" text="--">
+         <font>
+            <Font name="System Bold" size="11.773585319519043" />
+         </font>
+      </Label>
+      <Label fx:id="detailsField" layoutX="131.0" layoutY="505.0" prefHeight="18.0" prefWidth="155.0" text="--" />
+      <Label fx:id="dateField" layoutX="162.0" layoutY="532.0" prefHeight="18.0" prefWidth="129.0" text="--" />
+      <Label fx:id="quantityField" layoutX="160.0" layoutY="557.0" prefHeight="18.0" prefWidth="129.0" />
+      <Label fx:id="discountField" layoutX="409.0" layoutY="376.0" prefHeight="18.0" prefWidth="62.0" text="--" />
+      <Label fx:id="customerField" layoutX="431.0" layoutY="401.0" prefHeight="18.0" prefWidth="129.0" text="--" />
+      <Label fx:id="boostField" layoutX="431.0" layoutY="428.0" prefHeight="18.0" prefWidth="129.0" text="--" />
+      <Button layoutX="472.0" layoutY="372.0" mnemonicParsing="false" onAction="#showDiscount" prefHeight="25.0" prefWidth="47.0" text="Show" />
+      <Button layoutX="529.0" layoutY="372.0" mnemonicParsing="false" onAction="#hideDiscount" prefHeight="25.0" prefWidth="47.0" text="Hide" />
+      <Label fx:id="redQuantity" layoutX="160.0" layoutY="557.0" prefHeight="18.0" prefWidth="129.0" textFill="RED" />
+   </children>
+</AnchorPane>
