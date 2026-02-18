@@ -1,0 +1,25 @@
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id = "devs" class = "org.example.Developer" autowire="byType">
+        <!--<property name="age" value="12"/>  <!- getter setter injection with spring framework -->
+        <!--<property name="comp" ref="desk"/> -->
+        <property name="desk" ref="desk"/>
+        <constructor-arg value="14"/>    <!--Constructor injection -->
+
+    </bean>
+    <bean id = "desk" class = "org.example.Desktop">
+
+
+    </bean>
+
+    <bean id = "lap1" class="org.example.Laptop" primary="true">
+
+
+    </bean>
+
+</beans>
