@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.texteditor.EditorController">
+   <children>
+      <MenuBar prefHeight="25.0" prefWidth="600.0">
+        <menus>
+          <Menu fx:id="menu" mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="newFile" mnemonicParsing="false" onAction="#create" text="New" />
+                  <MenuItem fx:id="openFile" mnemonicParsing="false" onAction="#open" text="Open" />
+                  <MenuItem fx:id="saveFile" mnemonicParsing="false" onAction="#save" text="Save" />
+                  <MenuItem fx:id="closeFile" mnemonicParsing="false" onAction="#close" text="Close" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TabPane fx:id="tabOpen" layoutY="25.0" prefHeight="376.0" prefWidth="600.0" tabClosingPolicy="ALL_TABS" />
+   </children>
+</AnchorPane>
