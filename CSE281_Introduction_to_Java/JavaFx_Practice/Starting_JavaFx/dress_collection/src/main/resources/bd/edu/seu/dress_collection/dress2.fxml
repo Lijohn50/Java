@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="40.0" layoutX="185.0" layoutY="31.0" strokeType="INSIDE" width="230.0" />
+      <Label layoutX="198.0" layoutY="30.0" prefHeight="40.0" prefWidth="203.0" text="Dress Collection" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="27.0" />
+         </font>
+      </Label>
+      <Button layoutX="489.0" layoutY="37.0" mnemonicParsing="false" onAction="#backEvent" prefHeight="25.0" prefWidth="62.0" text="Back" />
+      <TextField layoutX="51.0" layoutY="89.0" prefHeight="25.0" prefWidth="512.0" promptText="Type and ente to search" />
+      <TableView layoutX="51.0" layoutY="129.0" prefHeight="171.0" prefWidth="511.0">
+        <columns>
+          <TableColumn prefWidth="69.73583984375" text="Name" />
+          <TableColumn prefWidth="62.49053955078125" text="Type" />
+            <TableColumn prefWidth="59.77362060546875" text="Color" />
+            <TableColumn prefWidth="56.15092468261719" text="Price" />
+            <TableColumn prefWidth="109.58489990234375" text="Last Purchase" />
+            <TableColumn minWidth="0.0" prefWidth="76.075439453125" text="Quantity" />
+            <TableColumn minWidth="0.0" prefWidth="75.16985158353378" text="Boosted" />
+        </columns>
+      </TableView>
+      <Separator layoutX="199.0" layoutY="319.0" prefWidth="200.0" />
+      <Label layoutX="71.0" layoutY="330.0" text="Selected Dress Information / Last Entried Product Information (Default)">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="366.0" text="Dress Name: " />
+      <Label layoutX="51.0" layoutY="391.0" text="Dress Type: " />
+      <Label layoutX="51.0" layoutY="418.0" text="Available Size: " />
+      <Label layoutX="51.0" layoutY="443.0" text="Dress Color: " />
+      <Label layoutX="51.0" layoutY="468.0" text="Price: ">
+         <font>
+            <Font name="System Bold" size="12.773585319519043" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="495.0" text="Dress Details: " />
+      <Label layoutX="51.0" layoutY="522.0" text="Last Purchase Date: " />
+      <Label layoutX="51.0" layoutY="547.0" text="Available Quantity: " />
+      <Separator layoutX="297.0" layoutY="368.0" orientation="VERTICAL" prefHeight="200.0" />
+      <Label layoutX="317.0" layoutY="366.0" text="Discount Code: " />
+      <Label layoutX="317.0" layoutY="391.0" text="Targated Customer: " />
+      <Label layoutX="317.0" layoutY="418.0" text="Facebook Boosting: " />
+      <ImageView fitHeight="84.0" fitWidth="66.0" layoutX="415.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="377.0" layoutY="543.0" mnemonicParsing="false" prefHeight="4.0" prefWidth="62.0" style="-fx-background-color: #384fff;" text="Edit" textFill="#f7f6f6" />
+      <Button layoutX="457.0" layoutY="543.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" style="-fx-background-color: #ff2121;" text="Delete" textFill="WHITE" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="402.0" prefWidth="603.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Rectangle arcHeight="5.0" fill="#3d45a3" height="375.0" layoutX="14.0" layoutY="14.0" strokeType="INSIDE" width="271.0" />
+      <Text fill="WHITE" layoutX="110.0" layoutY="200.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UMS" textAlignment="CENTER">
+         <font>
+            <Font name="Franklin Gothic Demi" size="38.0" />
+         </font>
+      </Text>
+      <Text fill="#e2e2e2" layoutX="88.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Made with no sense">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Text>
+      <Text layoutX="407.0" layoutY="159.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign in">
+         <font>
+            <Font name="Franklin Gothic Demi" size="25.0" />
+         </font>
+      </Text>
+      <Circle fill="DODGERBLUE" layoutX="445.0" layoutY="84.0" radius="46.0" strokeType="INSIDE" />
+      <TextField layoutX="354.0" layoutY="208.0" prefHeight="25.0" prefWidth="181.0" />
+      <PasswordField layoutX="354.0" layoutY="261.0" prefHeight="25.0" prefWidth="181.0" />
+      <Label layoutX="354.0" layoutY="186.0" text="Username" />
+      <Label layoutX="354.0" layoutY="240.0" text="Password" />
+      <Label layoutX="456.0" layoutY="290.0" text="Forgot Password?" textFill="#3d45a3">
+         <font>
+            <Font size="10.0" />
+         </font>
+      </Label>
+      <Button layoutX="407.0" layoutY="315.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="75.0" text="Sign in" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

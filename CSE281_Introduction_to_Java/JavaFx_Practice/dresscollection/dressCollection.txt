@@ -1,0 +1,4 @@
+full sleeve,Hoodie,0xcc3333ff,700.0,2025-05-01,4,true,123,new dress,Male,L,C:\Users\mahmu\OneDrive\Pictures\Screenshots\Screenshot 2025-05-11 001926.png
+high neck,Sweater,0x994d00ff,800.0,2025-05-05,4,true,098,another,Female,XXL,C:\Users\mahmu\OneDrive\Pictures\Screenshots\Screenshot 2025-05-01 205222.png
+turtle neck,Sweater,0x808080ff,816.6666666666667,2025-05-02,6,true,456,notun,Male,XL,C:\Users\mahmu\OneDrive\Pictures\Download\image.png
+sleevless,Hoodie,0xffff00ff,700.0,2025-05-01,5,true,345,red wool,Female,XXL,C:\Users\mahmu\OneDrive\Pictures\Screenshots\Screenshot 2025-05-01 203956.png

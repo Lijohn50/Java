@@ -1,0 +1,2 @@
+101,cse,mat
+102,eng,mgt,eee
